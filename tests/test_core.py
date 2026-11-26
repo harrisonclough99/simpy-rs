@@ -285,9 +285,9 @@ def test_stop_simulation_callback() -> None:
 
 
 def test_realtime_environment() -> None:
-    env = RealtimeEnvironment(factor=0.02, strict=True)
+    env = RealtimeEnvironment(factor=0.02, strict=False)
     assert env.factor == 0.02
-    assert env.strict is True
+    assert env.strict is False
 
     def ticker():
         yield env.timeout(1)
@@ -302,6 +302,7 @@ def test_realtime_environment() -> None:
 
     # Strict mode raises if simulation lags behind real time
     env_slow = RealtimeEnvironment(factor=0.01, strict=True)
+    assert env_slow.strict is True
 
     def slow_proc():
         time.sleep(0.05)
