@@ -1,0 +1,25 @@
+name: Provider / Feature Request
+description: Request a new Faker provider or feature
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: input
+    id: provider
+    attributes:
+      label: Faker Provider / Method Name
+      description: "e.g., fake.credit_card_number(), fake.slug()"
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Expected Behavior & Drop-in Signature
+      description: Describe the expected return type, format, and optional parameters.
+    validations:
+      required: true
+  - type: checkboxes
+    id: batch
+    attributes:
+      label: Batch Support
+      options:
+        - label: I would also use a batch version (e.g., `method_names(n)`)

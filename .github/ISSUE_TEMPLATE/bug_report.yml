@@ -1,0 +1,27 @@
+name: Bug Report
+description: Report a bug or drop-in compatibility issue with faker-rs
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear and concise description of what happened vs what you expected.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Minimal Reproduction
+      description: Python snippet reproducing the issue.
+      render: python
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: "e.g., Python 3.12, Windows 11 / Ubuntu 24.04, faker-rs 0.2.0"
+    validations:
+      required: true

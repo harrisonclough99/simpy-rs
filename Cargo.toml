@@ -1,0 +1,23 @@
+[package]
+name = "simpy-rs"
+version = "0.1.0"
+edition = "2021"
+description = "A high-performance, drop-in replacement for Python's SimPy discrete-event simulation library, backed by Rust and PyO3."
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/harrisonclough99/simpy-rs"
+keywords = ["simpy", "simulation", "discrete-event", "pyo3", "python"]
+categories = ["simulation"]
+
+[lib]
+name = "_simpy_rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+fastrand = "2.3"
+pyo3 = { version = "0.30", features = ["abi3-py39"] }
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+opt-level = 3

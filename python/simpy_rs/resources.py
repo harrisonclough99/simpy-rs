@@ -1,0 +1,41 @@
+"""Drop-in submodule matching ``simpy.resources``."""
+
+from ._simpy_rs import (
+    Container,
+    ContainerGet,
+    ContainerPut,
+    FilterStore,
+    FilterStoreGet,
+    Preempted,
+    PreemptiveResource,
+    PriorityItem,
+    PriorityRequest,
+    PriorityResource,
+    PriorityStore,
+    Release,
+    Request,
+    Resource,
+    Store,
+    StoreGet,
+    StorePut,
+)
+
+__all__ = [
+    "Container",
+    "ContainerGet",
+    "ContainerPut",
+    "FilterStore",
+    "FilterStoreGet",
+    "Preempted",
+    "PreemptiveResource",
+    "PriorityItem",
+    "PriorityRequest",
+    "PriorityResource",
+    "PriorityStore",
+    "Release",
+    "Request",
+    "Resource",
+    "Store",
+    "StoreGet",
+    "StorePut",
+]
